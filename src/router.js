@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Dashboard from './views/Dashboard.vue'
-import About from './views/About.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Dashboard from './views/Dashboard.vue';
+import About from './views/About.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -18,4 +18,4 @@ export default new Router({
       component: About
     }
   ]
-})
+});
