@@ -1,7 +1,9 @@
 <template>
+<div class="content">
   <div class="section">
     <Main/>
   </div>
+</div>
 </template>
 
 <script>
@@ -15,3 +17,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .content {
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.39);
+  }
+</style>

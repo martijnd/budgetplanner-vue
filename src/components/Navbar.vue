@@ -1,9 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-    </a>
+    <h2 class="title is-2">Budgetplanner</h2>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -23,5 +21,12 @@ export default {
 </script>
 
 <style lang="scss">
-    
+
+  .navbar {
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.39);
+  }
+
+  .navbar-brand {
+    margin: 10px 20px 0 20px;
+  }
 </style>

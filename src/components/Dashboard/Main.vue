@@ -1,7 +1,8 @@
 <template>
-<div class="container">
-    <h2 class="title is-2">test</h2>
-</div>
+  <div>
+    <h2 class="title is-2">Dashboard</h2>
+    <p>Here are your main stats</p>
+  </div>
 </template>
 
 <script>
