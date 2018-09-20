@@ -1,36 +1,69 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <router-link to="/" class="navbar-item">
-      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-    </router-link>
+  <div class="page-container">
+    <md-app md-mode="reveal">
+      <md-app-toolbar class="md-primary">
+        <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+          <md-icon>menu</md-icon>
+        </md-button>
+        <span class="md-title">{{ appName }}</span>
+      </md-app-toolbar>
 
-    <router-link to="/" class="navbar-item">Home</router-link>
-    <router-link to="/about" class="navbar-item">About</router-link>
+      <md-app-drawer :md-active.sync="menuVisible">
+        <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+        <md-list>
+          <md-list-item>
+            <md-icon>move_to_inbox</md-icon>
+            <span class="md-list-item-text">Inbox</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>send</md-icon>
+            <span class="md-list-item-text">Sent Mail</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>delete</md-icon>
+            <span class="md-list-item-text">Trash</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-icon>error</md-icon>
+            <span class="md-list-item-text">Spam</span>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
+
+      <md-app-content>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+      </md-app-content>
+    </md-app>
   </div>
-</nav>
 </template>
+
+<style lang="scss" scoped>
+
+</style>
 
 <script>
 export default {
-  name: 'Navbar',
-  props: {}
-};
+  name: 'Reveal',
+  data: () => ({
+    menuVisible: false,
+    appName: process.env.VUE_APP_NAME
+  })
+}
 </script>
-
-<style lang="scss">
-
-  .navbar {
-    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.39);
-  }
-
-  .navbar-brand {
-    margin: 10px 20px 0 20px;
-  }
-</style>

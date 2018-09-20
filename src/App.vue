@@ -1,46 +1,48 @@
 <template>
   <div id="app">
-      <navbar/>
-    <div class="container">
-      <router-view/>
+    <div id="nav">
+      <Navbar/>
+
     </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 import Navbar from '@/components/Navbar.vue';
-import 'bulma/css/bulma.css';
+import VueMaterial from 'vue-material';
+import 'vue-material/dist/vue-material.min.css';
 
-export default {
-  name: 'app',
+Vue.use(VueMaterial);
+
+@Component({
   components: {
-    Navbar
-  }
-};
+    Navbar,
+  },
+})
+
+// Vue.component('Navbar', Navbar);
+
+export default class App extends Vue {}
 </script>
 
+
 <style lang="scss">
-$bg-color: #6BAB90;
-$content-bg-color: #FFFFFF;
-
-  body {
-    background-color: $bg-color;
-    height: 100vh;
-    width: 100vw;
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
   }
-
-  .container {
-    width: 100vw;
-    height: calc(100vh - 89px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .content {
-    background-color: $content-bg-color;
-    min-width: 70%;
-    min-height: 70%;
-  }
+}
 </style>
-
